@@ -9,6 +9,26 @@ class Home extends StatelessWidget {
           child: new Text("Darjeeling"),
         ),
       ),
+      drawer: new Drawer(
+        child: new ListView(
+          children: <Widget>[
+            new ListTile(
+              leading: new Icon(Icons.info),
+              title: new Text("About"),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed("about");
+              },
+            ),
+            new Divider(color: Colors.black,),
+            new ListTile(
+              leading: new Icon(Icons.close),
+              title: new Text("Close"),
+              onTap: () => Navigator.of(context).pop(),
+            )
+          ],
+        )
+      ),
       body: new Stack(
         fit: StackFit.expand,
         children: <Widget>[

@@ -14,7 +14,7 @@ class CardButton extends StatelessWidget {
         new IconButton(
           icon: new Icon(Icons.list),
           tooltip: 'Know more about this place',
-          onPressed: _function_placeholder,
+          onPressed: () => Navigator.of(context).pushNamed("more")
         ),
         new IconButton(
           icon: new Icon(Icons.close),
